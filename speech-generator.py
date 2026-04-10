@@ -9,8 +9,10 @@ from langchain_core.output_parsers import StrOutputParser
 # -------------------------------
 # Initialize GPT LLM
 # -------------------------------
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-llm = ChatOpenAI(model="gpt-5", api_key=OPENAI_API_KEY)
+
+#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+apikey = st.text_input("Enter your OPENAI API Key")
+llm = ChatOpenAI(model="gpt-5", api_key=apikey)
 
 # -------------------------------
 # Streamlit UI
